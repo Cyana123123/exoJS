@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./assets/stylesheet/css/banniere.css">
+</head>
+  <body>
+    <h1>Bannière JS (Methode commercial pour proposer une promo ou une possibilité d'inscription)</h1>
+     <div class="brief">
+      <p>
+        Vous développez un  site marchand.
+        <br>1/ Faites apparaitre une bannière (proposition d'inscription à la newsletter) 5 secondes après le chargement de la page.
+        <br>2/ Cette bannière doit être fixer en bas de page.
+        <br>3/ Placez un bouton en haut à droite de la bannière pour fermer celle-ci.
+      </p>
+    </div>
+
+    
+
+    <div id='banniere'>
+      <button id='suppBan'>X</button>
+    </div>
+
+    <script>
+      //TODO
+        const banniere = document.querySelector('#banniere');
+        const suppBan = document.querySelector('#suppBan');
+
+        setTimeout(() => {
+          banniere.insertAdjacentHTML('beforeend', '<p>Voulez-vous vous inscrire à notre newsLetter ?</p>');
+        }, 5000);
+
+        suppBan.addEventListener('click', (even) => {
+          banniere.style.display='none';
+        })
+
+
+
+    </script>
+  </body>
+</html>

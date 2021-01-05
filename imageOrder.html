@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Challenge Javascript navigateur</title>
+    <link rel="stylesheet" href="./assets/stylesheet/css/imageOrder.css">
+  </head>
+  <body>
+    <h1>Premiers challenges en JS !</h1>
+    <div class="brief">
+      <p>Le click sur le bouton paramoteur doit permettre de n'afficher que les paramoteurs.<br>Idem pour multiaxe. <br>Le bouton all doit permettre de tout afficher <br> (voir imageOrder.html)</p>
+    </div>
+      <div id="imageBloc">
+        <button id="all"> All</button>
+        <button id="paramoteur">paramoteur</button>
+        <button id="multiaxe">multiaxe</button>
+          <ul class="paramoteur">
+            <li><img src="./assets/images/paramoteur1.jpg" width="300px" height="200px" alt="" id="ma-super-image1"></li>
+            <li><img src="./assets/images/paramoteur2.jpg" width="300px" height="200px" alt="" id="ma-super-image2"></li>
+            <li><img src="./assets/images/paramoteur3.jpg" width="300px" height="200px" alt="" id="ma-super-image3"></li>
+          </ul>
+          <ul class="multiaxe">
+            <li><img src="./assets/images/multiaxe1.jpg" width="300px" height="200px" alt="" id="ma-super-image4"></li>
+            <li><img src="./assets/images/multiaxe2.jpg" width="300px" height="200px" alt="" id="ma-super-image5"></li>
+            <li><img src="./assets/images/multiaxe3.jpg" width="300px" height="200px" alt="" id="ma-super-image6"></li>
+          </ul>
+      </div>
+      <script>
+        //TODO
+        //1 - Séléctionner l'éléments HTML 'bouton paramoteur' avec querySelector et le mettre dans une variable.
+        //2 - Séléctionner la liste ul 'multiaxe' avec querySelector et la mettre dans une variable.
+        //3 - Placer un 'micro' avec un addEventListener (click) sur l'élément HTML 'bouton paramoteur'
+        
+          const btnpara = document.querySelector('#paramoteur');
+          const listmulti = document.querySelector('.multiaxe');
+        
+        btnpara.addEventListener('click', () => {
+          listmulti.style.display = 'none';
+          listpara.style.display = 'block';
+        })
+
+          const btnmulti = document.querySelector('#multiaxe');
+          const listpara = document.querySelector('.paramoteur');
+
+        btnmulti.addEventListener('click', () => {
+          listpara.style.display = 'none';
+          listmulti.style.display = 'block';
+        })
+
+          const btnall = document.querySelector('#all');
+
+        btnall.addEventListener('click', () => {
+          listpara.style.display = 'block';
+          listmulti.style.display = 'block';
+        })
+
+      </script>
+  </body>
+</html>
+

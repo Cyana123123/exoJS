@@ -1,0 +1,11 @@
+
+#banniere  {
+    background-color: aqua;
+    position: fixed;
+    bottom: 0px;
+}
+
+#suppBan {
+    float: right;
+}
+
