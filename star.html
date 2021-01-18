@@ -13,16 +13,62 @@
     </h1>
 
     <ul id="list-of-stars">
-      <li><i class="fas fa-star"></i></li>
-      <li><i class="fas fa-star"></i></li>
-      <li><i class="fas fa-star"></i></li>
-      <li><i class="fas fa-star"></i></li>
-      <li><i class="fas fa-star"></i></li>
+      <li><i id="star1" class="fas fa-star"></i></li>
+      <li><i id="star2" class="fas fa-star"></i></li>
+      <li><i id="star3" class="fas fa-star"></i></li>
+      <li><i id="star4" class="fas fa-star"></i></li>
+      <li><i id="star5" class="fas fa-star"></i></li>
     </ul>
   </div>
   <div class="test"></div>
   <script>
       //TODO
+    const star1 = document.querySelector('#star1');
+    const star2 = document.querySelector('#star2');
+    const star3 = document.querySelector('#star3');
+    const star4 = document.querySelector('#star4');
+    const star5 = document.querySelector('#star5');
+
+    star1.addEventListener('click', (even) => {
+      star1.className = 'fas fa-star star-checked';
+      star2.className = 'fas fa-star';
+      star3.className = 'fas fa-star';
+      star4.className = 'fas fa-star';
+      star5.className = 'fas fa-star';
+    });
+
+    star2.addEventListener('click', (even) => {
+      star1.className = 'fas fa-star star-checked';
+      star2.className = 'fas fa-star star-checked';
+      star3.className = 'fas fa-star';
+      star4.className = 'fas fa-star';
+      star5.className = 'fas fa-star';
+    });
+
+    star3.addEventListener('click', (even) => {
+      star1.className = 'fas fa-star star-checked';
+      star2.className = 'fas fa-star star-checked';
+      star3.className = 'fas fa-star star-checked';
+      star4.className = 'fas fa-star';
+      star5.className = 'fas fa-star';
+    });
+
+    star4.addEventListener('click', (even) => {
+      star1.className = 'fas fa-star star-checked';
+      star2.className = 'fas fa-star star-checked';
+      star3.className = 'fas fa-star star-checked';
+      star4.className = 'fas fa-star star-checked';
+      star5.className = 'fas fa-star';
+    });
+
+    star5.addEventListener('click', (even) => {
+      star1.className = 'fas fa-star star-checked';
+      star2.className = 'fas fa-star star-checked';
+      star3.className = 'fas fa-star star-checked';
+      star4.className = 'fas fa-star star-checked';
+      star5.className = 'fas fa-star star-checked';
+    });
+
   </script>
 </body>
 </html>

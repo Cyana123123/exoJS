@@ -16,11 +16,30 @@
       <form action="" id="formulaire" style="text-align: center;">
         <input type="text" placeholder="ex: poire" id="userInput">
         <button id="bouton">Envoyer</button>
-        <button id="Supprime">Supprimer ma liste</button>
+        <button id="supprime">Supprimer ma liste</button>
       </form>
-    <div id="maListeDeCourse"></div>
+    <div id="maListeDeCourse">
+      <ul></ul>
+    </div>
     <script>
-      //TODO
+
+      const bouton = document.querySelector('#bouton');
+      const listeCourse = document.querySelector('#maListeDeCourse ul');
+      const supprimer = document.querySelector('#supprime');
+      //console.log(supprimer);
+      bouton.addEventListener('click', (event) => {
+        //console.log("clicked");
+        const butonValue = userInput.value;
+        //console.log(butonValue);
+        listeCourse.insertAdjacentHTML('beforeend', '<li>' + butonValue + ' </li>');
+        event.preventDefault();
+      });
+      supprimer.addEventListener('click', (event) => {
+        //console.log('clic');
+        listeCourse = "";
+        event.preventDefault();
+      })
+      
     </script>
   </body>
 </html>

@@ -8,9 +8,41 @@
     <h2>Faire apparaitre le mots de votre choix lettre par lettre dans la balise 'h1' (voir code...)
     <br>(voir type-effect.html)
     </h2>
-    <h1>avengers</h1>
+    <h1 id="h1">avengers</h1>
+    <h1 id="nextlettre"></h1>
   <script>
     //TODO
+
+  // recuperer AVNGER
+  var titre = document.querySelector('h1').textContent;
+  const body = document.querySelectorAll('body');
+  console.log(titre);
+
+  // je parcour le mot
+  var chars = titre.split('');
+
+    // j'affiche une a une les lettres parcourue
+    // var titre2 = ["o","p","q"];
+    // for(var i= 0; i < chars.length; i++)
+    // {
+    // setInterval(function(){    
+    //     var titreCard = document.querySelector('h1');
+    //     titreCard.insertAdjacentHTML('beforeend', '<div>'+ lettre[i] + '</div>');
+    //        }, 3000);
+    //     var lettre =+ chars[i];
+    // };
+
+    chars.forEach((letter, i) => {
+              setTimeout(() => {
+                  writeChar(letter)
+              }, i * 1000);
+    });
+    function writeChar(char) {
+        var ajoutLettre = document.querySelector('#nextlettre'); 
+        ajoutLettre.innerHTML +=  char ;
+    }
+
+
   </script>
   </body>
 </html>
